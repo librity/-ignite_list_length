@@ -1,21 +1,20 @@
 # ListLength
 
-**TODO: Add description**
+A simple module that calculates the size of a list with tail-call-optimized
+recursion.
 
-## Installation
+## Commands
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `list_length` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:list_length, "~> 0.1.0"}
-  ]
-end
+```bash
+$ mix test
+$ iex -S mix
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/list_length](https://hexdocs.pm/list_length).
-
+```elixir
+> ListLength.call([1, 2, 34])
+3
+> ListLength.call([1, 2, 34, 5, 5, 6])
+6
+> ListLength.call([])
+0
+```
